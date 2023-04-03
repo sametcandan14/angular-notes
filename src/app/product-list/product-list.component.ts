@@ -18,15 +18,15 @@ export class ProductListComponent implements OnInit {
   //   isActive: true,
   // };
 
-  productList = ['iphone 14', 'iphone 15', 'iphone 16', 'iphone 17'];
-  products = [
+  // productList = ['iphone 14', 'iphone 15', 'iphone 16', 'iphone 17'];
+  private products: any[] = [
     {
       id: 1,
       name: 'iphone 15',
       price: 20000,
       imageUrl: '1.jpeg',
       description: 'iyi telefon',
-      isActive: false,
+      isActive: true,
     },
     {
       id: 2,
@@ -45,4 +45,8 @@ export class ProductListComponent implements OnInit {
       isActive: true,
     },
   ];
+
+  getProducts() {
+    return this.products.filter((p) => p.isActive);
+  }
 }
