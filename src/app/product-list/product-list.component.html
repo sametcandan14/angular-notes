@@ -1,11 +1,11 @@
-<div *ngIf="getProducts().length > 0; else noProducts">
+<div *ngIf="products.length > 0; else noProducts">
   <ng-template
     [ngTemplateOutlet]="productList1"
-    [ngTemplateOutletContext]="{ products: getProducts() }"
+    [ngTemplateOutletContext]="{ products: products }"
   ></ng-template>
   <ng-template
     [ngTemplateOutlet]="productList2"
-    [ngTemplateOutletContext]="{ products: getProducts() }"
+    [ngTemplateOutletContext]="{ products: products }"
   ></ng-template>
 </div>
 
