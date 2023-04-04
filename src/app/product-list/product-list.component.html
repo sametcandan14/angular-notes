@@ -1,18 +1,13 @@
 <div *ngIf="products.length > 0; else noProducts">
   <ng-template
-    [ngTemplateOutlet]="productList1"
-    [ngTemplateOutletContext]="{ products: products }"
-  ></ng-template>
-  <ng-template
-    [ngTemplateOutlet]="productList2"
+    [ngTemplateOutlet]="productList"
     [ngTemplateOutletContext]="{ products: products }"
   ></ng-template>
 </div>
 
-<ng-template #productList1 let-products="products">
-  <h2>En çok satanlar</h2>
+<ng-template #productList let-products="products">
   <div *ngFor="let product of products">
-    <div *ngIf="product.isActive" class="card mb-3">
+    <div *ngIf="product.isActive" class="card mb-3 p-1">
       <div class="row">
         <div class="col-3">
           <img
@@ -34,28 +29,6 @@
   </div>
 </ng-template>
 
-<ng-template #productList2 let-products="products">
-  <h2>En Beğenilenler</h2>
-  <div class="row">
-    <div *ngFor="let product of products" class="col-3">
-      <div *ngIf="product.isActive" class="card mb-3">
-        <img
-          src="../../assets/images/{{ product.imageUrl }}"
-          alt=""
-          class="card-img-top"
-        />
-      </div>
-      <div class="col-9">
-        <div class="card-body">
-          <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">
-            {{ product.description }}
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</ng-template>
 <ng-template #noProducts>
   <div class="alert alert-warning">no products</div>
 </ng-template>
