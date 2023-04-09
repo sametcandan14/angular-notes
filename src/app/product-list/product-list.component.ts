@@ -21,7 +21,7 @@ export class ProductListComponent implements OnInit {
     this.selectedProduct = product;
   }
 
-  unSelectProduct(product: Product) {
+  unSelectProduct() {
     this.selectedProduct = null;
   }
 }

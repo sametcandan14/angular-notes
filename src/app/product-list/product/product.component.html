@@ -1,20 +1,21 @@
-<div class="card mb-3">
+<div class="card mb-3 p-1 border border-warning">
   <div class="row">
     <div class="col-3">
       <img
-        src="../../assets/images/1.jpeg"
+        src="../../assets/images/{{ prd.imageUrl }}"
         alt=""
         class="img-fluid rounded-start"
       />
     </div>
     <div class="col-9">
       <div class="card-body">
-        <h5 class="card-title">IPhone 14</h5>
+        <h5 class="card-title">{{ prd.name }}</h5>
         <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit,
-          sequi. Voluptatem minima quisquam hic fuga culpa reprehenderit quaerat
-          ex unde?
+          {{ prd.description }}
         </p>
+        <button (click)="unSelectProduct()" class="btn btn-primary btn-sm">
+          Unselect Product
+        </button>
       </div>
     </div>
   </div>
