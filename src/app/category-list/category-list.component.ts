@@ -9,6 +9,7 @@ import { CategoryRepository } from '../models/category.repository';
 })
 export class CategoryListComponent implements OnInit {
   categories: Category[];
+  selectedCategory: Category | null;
   categoryRepository: CategoryRepository;
 
   constructor() {
@@ -16,4 +17,12 @@ export class CategoryListComponent implements OnInit {
     this.categories = this.categoryRepository.getCategories();
   }
   ngOnInit(): void {}
+
+  selectCategory(category: Category) {
+    if (this.selectedCategory) {
+      this.selectedCategory = null;
+    } else {
+      this.selectedCategory = category;
+    }
+  }
 }

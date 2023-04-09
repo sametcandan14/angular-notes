@@ -7,7 +7,7 @@ export class ProductRepository {
       name: 'iphone 15',
       price: 20000,
       imageUrl: '1.jpeg',
-      description: 'iyi telefon',
+      description: 'good phone',
       isActive: true,
     },
     {
@@ -15,7 +15,7 @@ export class ProductRepository {
       name: 'iphone 16',
       price: 25000,
       imageUrl: '2.jpeg',
-      description: 'iyi telefon',
+      description: 'good phone',
       isActive: true,
     },
     {
@@ -23,7 +23,7 @@ export class ProductRepository {
       name: 'iphone 17',
       price: 30000,
       imageUrl: '3.jpeg',
-      description: 'iyi telefon',
+      description: 'good phone',
       isActive: true,
     },
   ];
