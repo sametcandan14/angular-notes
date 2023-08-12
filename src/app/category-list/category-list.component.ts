@@ -18,11 +18,16 @@ export class CategoryListComponent implements OnInit {
   }
   ngOnInit(): void {}
 
-  selectCategory(category: Category) {
-    if (this.selectedCategory) {
-      this.selectedCategory = null;
-    } else {
+  displayAll = true;
+
+  selectCategory(category?: Category) {
+    if (category) {
       this.selectedCategory = category;
+
+      this.displayAll = false;
+    } else {
+      this.selectedCategory = null;
+      this.displayAll = true;
     }
   }
 }

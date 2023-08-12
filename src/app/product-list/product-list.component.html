@@ -1,9 +1,3 @@
-<product
-  [prd]="selectedProduct"
-  (unSelectEvent)="unSelectProduct()"
-  *ngIf="selectedProduct"
-></product>
-
 <div *ngIf="products.length > 0; else noProducts">
   <ng-template
     [ngTemplateOutlet]="productList"
@@ -28,12 +22,11 @@
             <p class="card-text">
               {{ product.description }}
             </p>
-            <button
-              (click)="selectProduct(product)"
+            <a
+              routerLink="/products/{{ product.id }}"
               class="btn btn-primary btn-sm"
+              >Product Detail</a
             >
-              Select Product
-            </button>
           </div>
         </div>
       </div>
